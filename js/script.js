@@ -20,9 +20,9 @@ function showTextNode(textNodeIndex) {
             const button = document.createElement('button')
             button.innerText = option.text
             button.classList.add('btn')
-            button.classList.add('btn-primary')
-            button.classList.add('mx-1')
-            button.classList.add('my-1')
+            button.classList.add('btn-outline-secondary')
+            button.classList.add('mx-2')
+            button.classList.add('my-4')
             button.addEventListener('click', () => selectOption(option))
             optionButtonsElement.appendChild(button)
         }
@@ -45,7 +45,11 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ' +
+            'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ' +
+            'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ' +
+            'fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ' +
+            'mollit anim id est laborum.',
         options: [
             {
                 text: 'Take the goo',
