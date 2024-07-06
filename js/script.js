@@ -22,7 +22,7 @@ function showTextNode(textNodeIndex) {
             button.classList.add('btn')
             button.classList.add('btn-outline-secondary')
             button.classList.add('mx-2')
-            button.classList.add('my-4')
+            button.classList.add('my-2')
             button.addEventListener('click', () => selectOption(option))
             optionButtonsElement.appendChild(button)
         }
@@ -45,48 +45,55 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ' +
-            'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ' +
-            'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ' +
-            'fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ' +
-            'mollit anim id est laborum.',
+        text: ' In the autumn of 1380, Thomas, a farmer in Brentwood, learns of a new poll tax from the village crier. ' +
+            ' The crier notifies every villager that four pence were to be taken from every man and woman over the age of fourteen.\n\n ' +
+            ' Thomas, who was already struggling to pay the current tax amount, was absolutely shocked. He immediately headed over to his wife to tell her the news. ' +
+            ' Discussing their dire situation, Thomas and his wife, Margaret, realize they cannot afford the tax, not with their current situation.\n\n ' +
+            ' Their friend William, who had overheard their discussion, suggests resisting by refusing to pay. He had planned on roping in other farmers in the town to join him.',
         options: [
             {
-                text: 'Take the goo',
-                setState: { blueGoo: true },
+                text: 'Comply with the poll tax,\n swallowing the pain of this increased burden.',
                 nextText: 2
             },
             {
-                text: 'Leave the goo',
-                nextText: 2
+                text: 'Refuse to pay the tax,\n joining the makeshift resistance.',
+                nextText: 3
             }
         ]
     },
     {
         id: 2,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        text: 'Thomas and Margaret sat near their fireplace, thinking about the weight of the new poll tax.' +
+            ' When their friend William suggested joining the resistance, his face serious, they listened as he proposed' +
+            ' joining his makeshift resistance of other townspeople.\n\n' +
+            ' "It\'s too risky," Margaret said, shaking her head. "We\'re just not cut out for a life of fighting." Thomas agreed reluctantly.' +
+            ' "We\'ll find a way to pay," he said. William left, disappointed.\n\n' +
+            ' The next day, they handed over their hard-earned shilling to the tax collector.' +
+            ' As they walked back home, they had to force down thoughts of joining William.' +
+            ' "We have to stay strong," Thomas quietly says. "We have to, for our sake," Margaret replies.\n\n',
         options: [
             {
-                text: 'Trade the goo for a sword',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
-                nextText: 3
-            },
-            {
-                text: 'Trade the goo for a shield',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, shield: true },
-                nextText: 3
-            },
-            {
-                text: 'Ignore the merchant',
-                nextText: 3
+                text: 'Restart',
+                nextText: -1
             }
+
         ]
     },
     {
         id: 3,
-        text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+        text: 'Thomas and Margaret sat near their fireplace, thinking about the weight of the new poll tax.' +
+            ' When their friend William suggested joining the resistance, his face serious, they listened as he proposed' +
+            ' joining his makeshift resistance of other townspeople.\n\n' +
+            ' "It\'s risky," Margaret said, glancing at Thomas. "But we can\'t keep living like this," he interjected.' +
+            ' After a moment, Margaret nodded. "We\'re in," she said.\n\n' +
+            ' That night, they met with other villagers in secret.' +
+            ' Plans were made to refuse the tax and protest. Thomas and Margaret felt a spark of hope.' +
+            ' The following days were filled with covert meetings and whispered plans. Despite the dangers,' +
+            ' the sense of unity and purpose among the villagers grew stronger.\n\n' +
+            ' As they joined William and other farmers in acts of defiance, tearing down tax notices and protecting' +
+            ' each other from collectors, their lives took on a new, rebellious rhythm. The fear of retribution lingered,' +
+            ' but the determination to fight for their rights outweighed it. The community\'s resistance grew,' +
+            ' setting the stage for the larger revolt that would soon shake the foundations of feudal England.',
         options: [
             {
                 text: 'Explore the castle',
