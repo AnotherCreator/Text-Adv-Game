@@ -22,7 +22,7 @@ function showTextNode(textNodeIndex) {
             button.classList.add('btn')
             button.classList.add('btn-outline-secondary')
             button.classList.add('mx-2')
-            button.classList.add('my-2')
+            button.classList.add('my-3')
             button.addEventListener('click', () => selectOption(option))
             optionButtonsElement.appendChild(button)
         }
@@ -43,7 +43,13 @@ function selectOption(option) {
 }
 
 const textNodes = [
-    {
+    // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+    // ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip' +
+    // ' ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu' +
+    // ' fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt' +
+    // ' mollit anim id est laborum.'
+
+    { // Poll Tax Arc
         id: 1,
         text: ' In the autumn of 1380, Thomas, a farmer in Brentwood, learns of a new poll tax from the village crier. ' +
             ' The crier notifies every villager that four pence were to be taken from every man and woman over the age of fourteen.\n\n ' +
@@ -68,9 +74,9 @@ const textNodes = [
             ' joining his makeshift resistance of other townspeople.\n\n' +
             ' "It\'s too risky," Margaret said, shaking her head. "We\'re just not cut out for a life of fighting." Thomas agreed reluctantly.' +
             ' "We\'ll find a way to pay," he said. William left, disappointed.\n\n' +
-            ' The next day, they handed over their hard-earned shilling to the tax collector.' +
+            ' The next day, they handed over their hard-earned pence to the tax collector.' +
             ' As they walked back home, they had to force down thoughts of joining William.' +
-            ' "We have to stay strong," Thomas quietly says. "We have to, for our sake," Margaret replies.\n\n',
+            ' "We have to stay strong," Thomas quietly says. "We have to, for our sake," Margaret replies.',
         options: [
             {
                 text: 'Restart',
@@ -91,115 +97,26 @@ const textNodes = [
             ' The following days were filled with covert meetings and whispered plans. Despite the dangers,' +
             ' the sense of unity and purpose among the villagers grew stronger.\n\n' +
             ' As they joined William and other farmers in acts of defiance, tearing down tax notices and protecting' +
-            ' each other from collectors, their lives took on a new, rebellious rhythm. The fear of retribution lingered,' +
-            ' but the determination to fight for their rights outweighed it. The community\'s resistance grew,' +
-            ' setting the stage for the larger revolt that would soon shake the foundations of feudal England.',
+            ' each other from the tax collectors, their lives took on a new, rebellious rhythm. While the fear of punishment lingered,' +
+            ' their determination to fight for a better life served as their shield.\n\n' +
+            ' And as their resistance grew, they began setting the stage for a larger revolt that would soon shake the foundations of medieval England.',
         options: [
             {
-                text: 'Explore the castle',
+                text: 'Continue',
                 nextText: 4
             },
-            {
-                text: 'Find a room to sleep at in the town',
-                nextText: 5
-            },
-            {
-                text: 'Find some hay in a stable to sleep in',
-                nextText: 6
-            }
         ]
     },
-    {
+    { // Storming of London
         id: 4,
-        text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+            ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip' +
+            ' ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu' +
+            ' fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt' +
+            ' mollit anim id est laborum.',
         options: [
             {
                 text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 5,
-        text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 6,
-        text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
-        options: [
-            {
-                text: 'Explore the castle',
-                nextText: 7
-            }
-        ]
-    },
-    {
-        id: 7,
-        text: 'While exploring the castle you come across a horrible monster in your path.',
-        options: [
-            {
-                text: 'Try to run',
-                nextText: 8
-            },
-            {
-                text: 'Attack it with your sword',
-                requiredState: (currentState) => currentState.sword,
-                nextText: 9
-            },
-            {
-                text: 'Hide behind your shield',
-                requiredState: (currentState) => currentState.shield,
-                nextText: 10
-            },
-            {
-                text: 'Throw the blue goo at it',
-                requiredState: (currentState) => currentState.blueGoo,
-                nextText: 11
-            }
-        ]
-    },
-    {
-        id: 8,
-        text: 'Your attempts to run are in vain and the monster easily catches.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 9,
-        text: 'You foolishly thought this monster could be slain with a single sword.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 10,
-        text: 'The monster laughed as you hid behind your shield and ate you.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 11,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
-        options: [
-            {
-                text: 'Congratulations. Play Again.',
                 nextText: -1
             }
         ]
