@@ -57,11 +57,11 @@ const textNodes = [
             ' Discussing their dire situation, Thomas and his wife, Margaret, realize they cannot afford the tax, not with their current situation.\n\n ' +
             ' Their friend William, who had overheard their discussion, suggests resisting by refusing to pay. He had planned on roping in other farmers in the town to join him.',
         options: [
-            {
+            {  // Pay the tax
                 text: 'Comply with the poll tax,\n swallowing the pain of this increased burden.',
                 nextText: 2
             },
-            {
+            {  // Refuse to pay tax
                 text: 'Refuse to pay the tax,\n joining the makeshift resistance.',
                 nextText: 3
             }
@@ -85,7 +85,7 @@ const textNodes = [
 
         ]
     },
-    {
+    {  // Join early unrest
         id: 3,
         text: 'Thomas and Margaret sat near their fireplace, thinking about the weight of the new poll tax.' +
             ' When their friend William suggested joining the resistance, his face serious, they listened as he proposed' +
@@ -103,24 +103,109 @@ const textNodes = [
         options: [
             {
                 text: 'Continue',
-                nextText: 4
+                nextText: 4  // Continue to the storming of London
             },
         ]
     },
     { // Storming of London
         id: 4,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-            ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip' +
-            ' ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu' +
-            ' fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt' +
-            ' mollit anim id est laborum.',
+        text: 'STORMING OF LONDON STORY',
+        options: [
+            {  // Violent path
+                text: 'Continue violenty storming towards the Tower of London',
+                nextText: 10
+            },
+            {  // Peaceful path
+                text: 'Realize that the rebellion has taken a violent turn' +
+                    'and you choose to protect the innocent',
+                nextText: 5
+            }
+        ]
+    },
+    { // Protect the citizens being targeted by wat tyler
+        id: 5,
+        text: 'STORY OF PROTECTING FIGURES BEING TARGETED BY WAT TYLER',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 6
+            }
+        ]
+    },
+    { // advocate for less violence while protecting more people
+        id: 6,
+        text: 'STORY OF ADVOCATING FOR LESS VIOLENCE AS A BARGAINING CHIP',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 7
+            }
+        ]
+    },
+    { // Meeting at Mile End (Peaceful) w/ Richard II
+        id: 7,
+        text: 'STORY OF PEACEFUL MEETING W/ RICHARD II TO DEMAND CHANGES',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 8
+            }
+        ]
+    },
+    { // Compromises with the peasants and while he cant fulfill all their demands, he can do some of them
+        id: 8,
+        text: 'STORY OF PEACEFUL COMPROMISE WITH THE PEASANTS',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 9
+            }
+        ]
+    },
+    { // End of protests and peaceful disperal of peasants who chose to go against wat tyler
+        id: 9,
+        text: 'STORY OF PEACEFUL ENDING',
         options: [
             {
                 text: 'Restart',
                 nextText: -1
             }
         ]
-    }
+    },
+    { // Destroy Properties
+        id: 10,
+        text: 'STORY OF DESTROYING PROPERITIES',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 11
+            }
+        ]
+    },
+    { // Kill political, noble figures
+        id: 11,
+        text: 'STORY OF KILLING NOBLE, ROYAL FIGURES DETERMINED BY WAT TYLER',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 12
+            }
+        ]
+    },
+    { // Violent + Forceful meeting with King Richard II
+        id: 12,
+        text: 'STORY OF MEETING KING RICHARD II AND DEMAND CHANGES',
+        options: [
+            {
+                text: 'Trust King Richard II after making a verbal agreement',
+                nextText: 13
+            },
+            {
+                text: 'Trust King Richard II after making a verbal agreement',
+                nextText: 13
+            }
+        ]
+    },
 ]
 
 startGame()
