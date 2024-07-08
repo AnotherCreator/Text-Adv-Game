@@ -197,12 +197,106 @@ const textNodes = [
         text: 'STORY OF MEETING KING RICHARD II AND DEMAND CHANGES',
         options: [
             {
-                text: 'Trust King Richard II after making a verbal agreement',
+                text: 'Trust King Richard II after making a verbal agreement and return home',
                 nextText: 13
             },
             {
-                text: 'Trust King Richard II after making a verbal agreement',
-                nextText: 13
+                text: 'Demand written proof',
+                nextText: 15
+            }
+        ]
+    },
+    { // Return home only to have your home village raided by the royal forces and imprisoned for life
+        id: 13,
+        text: 'STORY OF LISTENING TO KING RICHARD AND HIS FAKE PROMISES',
+        options: [
+            {
+                text: 'Return home',
+                nextText: 14
+            }
+        ]
+    },
+    { // Return home only to have your home village raided by the royal forces and imprisoned for life
+        id: 14,
+        text: 'STORY OF RETURNING HOME THINKING RICARD II WILL FULFILL HIS PROMISES ONLY TO BE LATER RAIDED BY ROYAL FORCES AND IMPRISONED',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    { // Wat Tyler demands written proof and gets closer to the king
+        id: 15,
+        text: 'STORY OF WAT TYLER DEMANDING WRITTEN PROOF AND GETTING CLOSE TO THE KING',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 16
+            }
+        ]
+    },
+    { // Wat Tyler gets stabbed and dies
+        id: 16,
+        text: 'STORY OF WAT TYLER DYING BY BEING STABBED',
+        options: [
+            {
+                text: 'Scatter',
+                nextText: 17
+            },
+            {
+                text: 'Violently Rally',
+                nextText: 19
+            }
+        ]
+    },
+    { // Rebel forces scatter
+        id: 17,
+        text: 'STORY OF REBEL FORCES SCATTERING',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 18
+            }
+        ]
+    },
+    { // Rebellion ends up collapsing with rebels being forced to live in fear and peasants being further punished and controlled
+        id: 18,
+        text: 'STORY OF REBELLION COLLAPSING BUT EVENTUALLY LEADING TO CHANGE',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    { // Rebels gets stirred up with the death of wat tyler and violently rallies
+        id: 19,
+        text: 'STORY OF REBELS VIOLENTLY RALLYING DUE TO WAT TYLER\'S DEATH',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 20
+            }
+        ]
+    },
+    { // Rebels fight their way out of London and recruit more peasants who are displeased with the royal orders
+        id: 20,
+        text: 'STORY OF REBELS FIGHTING THEIR WAY OUT OF LONDON AND RECRUITING MORE PEASANTS',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 21
+            }
+        ]
+    },
+    { // After doing significant damage, the king is forced to address the issue
+        id: 21,
+        text: 'KING IS FORCED TO AGREE TO THE PEASANT\'S DEMANDS AND ENDS THE REBELLION',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 21
             }
         ]
     },
