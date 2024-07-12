@@ -90,7 +90,7 @@ const textNodes = [
             ' The next day, they handed over their hard-earned pence to the tax collector.' +
             ' As they walked back home, they had to force down thoughts of joining William.' +
             ' "We have to stay strong," Thomas quietly says. "We have to, for our sake," Margaret replies.',
-        end: 'Neutral Ending',
+        end: 'End: A Period of Taxes',
         options: [
             {
                 text: 'Restart',
@@ -175,6 +175,7 @@ const textNodes = [
             }
         ]
     },
+    // Peaceful path
     { // Persuade Wat Tyler
         id: 5,
         header: 'The Peaceful Turn in London',
@@ -183,7 +184,7 @@ const textNodes = [
             ' Tyler hesitated, his fierce demeanor softening. After a moment, he raised his hand, signaling the rebels to halt.' +
             ' "We\'ll seek a peaceful resolution," he announced. Together, they drafted a list of demands for the king,' +
             ' focusing on justice and reform without further bloodshed.\n\n' +
-            ' The following day, they marched peacefully to meet King Richard II.' +
+            ' The following day, they marched peacefully to meet King Richard II at the Tower of London.' +
             ' Their decision to change tactics opened a new chapter in their struggle, aiming for lasting change through negotiation.',
         end: '',
         options: [
@@ -196,7 +197,7 @@ const textNodes = [
     { // advocate for less violence while protecting more people
         id: 6,
         header: 'The Calm Meeting with King Richard II',
-        text: ' The day arrived when Wat Tyler, flanked by Thomas and Margaret, stood before King Richard II at Smithfield.' +
+        text: ' The day arrived when Wat Tyler, flanked by Thomas and Margaret, stood before King Richard II at Mile End.' +
             ' The atmosphere was tense but hopeful, with the rebels gathered peacefully around their leader. Tyler,' +
             ' bold and unyielding, presented their demands: the end of serfdom, fair wages, and justice for the oppressed.\n\n' +
             ' Thomas and Margaret watched as the young king listened intently. Richard\'s advisors were wary,' +
@@ -234,7 +235,7 @@ const textNodes = [
             ' Their efforts had not been in vain, and the changes, though incremental, marked the beginning of a' +
             ' shift in the feudal system that had oppressed them for so long. The seeds of change had been sown,' +
             ' promising a better future for their community.',
-        end: 'Peaceful Ending',
+        end: 'End: A Peaceful Compromise',
         options: [
             {
                 text: 'Restart',
@@ -242,9 +243,18 @@ const textNodes = [
             }
         ]
     },
-    { // Destroy Properties
+    // Violent path
+    {
         id: 10,
-        text: 'STORY OF DESTROYING PROPERITIES',
+        header: 'The Raging Storm in London',
+        text: ' After a moment of uncertainty between Thomas and Margaret, Wat Tyler\'s unwavering voice echoed through the streets,' +
+            ' "We must press on!" he yelled. The rebels, fueled by anger, desperation, and Tyler\'s encouragement,' +
+            ' surged forward. They looted, pillaged, and murdered, sweeping through London with relentless fury.\n\n' +
+            ' Thomas and Margaret, caught in the flames of war, fought alongside their fellow peasants.' +
+            ' Lawyers, petty officials, and even foreigners found themselves at the mercy of the rebellion.' +
+            ' The violence escalated, and the city trembled under the rebels\' onslaught. As royal forces regrouped,' +
+            ' preparing for a counterattack, Thomas and Margaret faced the harsh reality of their actions, uncertain of what their future held.',
+        end: '',
         options: [
             {
                 text: 'Continue',
@@ -252,9 +262,19 @@ const textNodes = [
             }
         ]
     },
-    { // Kill political, noble figures
+    { // King makes an appearance
         id: 11,
-        text: 'STORY OF KILLING NOBLE, ROYAL FIGURES DETERMINED BY WAT TYLER',
+        header: 'The King Appears',
+        text: ' With their momentum unchecked, the rebels laid siege to the Tower of London. The stronghold,' +
+            ' a symbol of royal authority, became their next target. Determined to show their strength,' +
+            ' they broke through its defenses, capturing and executing officials who sought refuge within its walls.\n\n' +
+            ' Amidst this turmoil, King Richard II, recognizing the seriousness of the situation, knew he had to address the rebels directly.' +
+            ' He sent word, asking them to meet him at Mile End. There, he promised to listen to their demands and negotiate a resolution.' +
+            ' To further persuade the rebels, Richard II offered a royal pardon for their crimes if they dispersed and left London peacefully.\n\n' +
+            ' Thomas and Margaret, alongside their fellow peasants, felt a glimmer of hope as they prepared for the crucial' +
+            ' meeting that could change their fate. The promise of pardon hung in the air, a potential end to their' +
+            ' violent struggle and a chance to achieve their demands without further bloodshed.',
+        end: '',
         options: [
             {
                 text: 'Continue',
@@ -264,31 +284,50 @@ const textNodes = [
     },
     { // Violent + Forceful meeting with King Richard II
         id: 12,
-        text: 'STORY OF MEETING KING RICHARD II AND DEMAND CHANGES',
+        header: 'The Forceful Meeting with King Richard II',
+        text: ' On June 14, 1381, Wat Tyler led the rebels, including Thomas and Margaret, to Mile End for their meeting with King Richard II.' +
+            ' The atmosphere was tense but filled with cautious hope. Hundreds of peasants gathered,' +
+            ' their faces reflecting the wear and the hope of their struggle.\n\n ' +
+            ' King Richard, a mere 14-year-old, stood with his advisors, ready to negotiate.' +
+            ' Wat Tyler stepped forward, presenting their demands: the abolition of serfdom, fair wages, and justice for the oppressed.' +
+            ' The young king listened intently.\n\n' +
+            ' After hearing Tyler\'s passionate speech, Richard II once again offered a royal pardon for the rebels\'' +
+            ' actions if they would disband from the rebellion. He assured them that their demands' +
+            ' would be seriously considered and promised immediate relief by abolishing the hated poll tax.\n\n' +
+            ' As the rebels stood at Mile End, King Richard II’s verbal promise echoed through the crowd,' +
+            ' offering hope and a possible end to their violent struggle. Thomas and Margaret, along with their fellow peasants,' +
+            ' felt a sense of cautious optimism. Yet, doubts lingered. Could they trust a mere verbal assurance from the crown?\n\n' +
+            ' Wat Tyler listened to the chatter of the peasants, contemplating their next move.' +
+            ' "We need more than words," some argued. "A written guarantee will ensure the king keeps his promise," others insisted.',
+        end: '',
         options: [
             {
-                text: 'Trust King Richard II after making a verbal agreement and return home',
+                text: 'Trust King Richard II\'s\n verbal promise and disperse',
                 nextText: 13
             },
             {
-                text: 'Demand written proof',
+                text: 'Further demand written proof\nfrom King Richard II',
                 nextText: 15
             }
         ]
     },
-    { // Return home only to have your home village raided by the royal forces and imprisoned for life
+    // Return home only to have your home village raided by the royal forces and imprisoned for life
+    {
         id: 13,
-        text: 'STORY OF LISTENING TO KING RICHARD AND HIS FAKE PROMISES',
-        options: [
-            {
-                text: 'Return home',
-                nextText: 14
-            }
-        ]
-    },
-    { // Return home only to have your home village raided by the royal forces and imprisoned for life
-        id: 14,
-        text: 'STORY OF RETURNING HOME THINKING RICARD II WILL FULFILL HIS PROMISES ONLY TO BE LATER RAIDED BY ROYAL FORCES AND IMPRISONED',
+        header: 'The Promise',
+        text: ' Margaret, weary from the conflict, urged, "Let\'s trust the king\'s word and go home. We\'ve shed enough blood."' +
+            ' Her words resonated with many, including Wat Tyler, who saw the toll the struggle had taken on his people.' +
+            ' Tyler raised his hand, signaling for silence. "Margaret speaks wisely," he said. ' +
+            ' "We have shown our strength and made our demands clear. It\'s time to trust the king\'s word and disperse peacefully."' +
+            ' Encouraged by Tyler\'s command, the rebels began to disperse, heading back to their villages with hope in their hearts.' +
+            ' Thomas and Margaret, relieved by the promise of change, joined their fellow peasants in the journey home, hopeful for a better future.\n\n' +
+            ' One quiet evening, as Thomas and Margaret reached the outskirts of their village,' +
+            ' they were startled by the sound of approaching steps and the ringing of metal. A detachment of royal soldiers,' +
+            ' clad in armor and bearing the king\'s insignia, emerged from the shadows with swords drawn.\n\n' +
+            ' Thomas and Margaret exchanged fearful glances. They had trusted in the king\'s word, and now they faced the' +
+            ' harsh reality of rebelling. With no choice but to follow the soldiers, they were escorted away from their homes,' +
+            ' leaving behind the hope they had carried in their hearts just moments before.',
+        end: 'End: The Empty Words',
         options: [
             {
                 text: 'Restart',
@@ -296,9 +335,14 @@ const textNodes = [
             }
         ]
     },
-    { // Wat Tyler demands written proof and gets closer to the king
+    {
         id: 15,
-        text: 'STORY OF WAT TYLER DEMANDING WRITTEN PROOF AND GETTING CLOSE TO THE KING',
+        header: 'The Written Demands',
+        text: ' "We want this in writing!" Thomas said out loud, his voice firm.' +
+            ' Wat Tyler took a moment to think about what Thomas said and continued to listen to the peasants and their pleas.' +
+            ' King Richard, taken aback by the persistence of the rebels, reluctantly agreed to their demand. However, just as Wat Tyler' +
+            ' further approached the King, William Walworth, the Mayor of London, charged forward and stabbed him.',
+        end: '',
         options: [
             {
                 text: 'Continue',
@@ -308,68 +352,35 @@ const textNodes = [
     },
     { // Wat Tyler gets stabbed and dies
         id: 16,
-        text: 'STORY OF WAT TYLER DYING BY BEING STABBED',
-        options: [
-            {
-                text: 'Scatter',
-                nextText: 17
-            },
-            {
-                text: 'Violently Rally',
-                nextText: 19
-            }
-        ]
-    },
-    { // Rebel forces scatter
-        id: 17,
-        text: 'STORY OF REBEL FORCES SCATTERING',
+        header: 'The Death of Wat Tyler',
+        text: ' The scene erupted into chaos as Tyler fell, mortally wounded. The rebels, stunned by the sudden violence,' +
+            ' hesitated in disbelief. Margaret stared in horror as Thomas rushed to Wat Tyler\'s side, trying to staunch the bleeding.\n\n' +
+            ' King Richard, visibly shaken but now surrounded by his advisors and guards, shouted for order. The peasants,' +
+            ' enraged and grief-stricken by the betrayal they had just witnessed, looked on with a mix of fear and fury.\n\n' +
+            ' The rebels were forcibly dispersed, Thomas and Margaret, their hopes shattered once again, scattered with the rest of the rebels.' +
+            ' They were to face uncertain fates, caught between their dreams of a better life and the harsh reality of royal retribution.',
+        end: '',
         options: [
             {
                 text: 'Continue',
-                nextText: 18
+                nextText: 17
             }
         ]
     },
     { // Rebellion ends up collapsing with rebels being forced to live in fear and peasants being further punished and controlled
-        id: 18,
-        text: 'STORY OF REBELLION COLLAPSING BUT EVENTUALLY LEADING TO CHANGE',
+        id: 17,
+        header: 'Changes',
+        text: ' In the aftermath of the revolt, despite the tragic end at Mile End, the seeds of change had been sown.' +
+            ' The violent suppression only served to intensify the peasants\' resolve for justice.' +
+            ' Over time, King Richard was forced to abandon the hated poll tax, and serfs gained more rights, including the ability to buy their freedom.',
+        end: 'End: The Seeds of Hope',
         options: [
             {
                 text: 'Restart',
                 nextText: -1
             }
         ]
-    },
-    { // Rebels gets stirred up with the death of wat tyler and violently rallies
-        id: 19,
-        text: 'STORY OF REBELS VIOLENTLY RALLYING DUE TO WAT TYLER\'S DEATH',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 20
-            }
-        ]
-    },
-    { // Rebels fight their way out of London and recruit more peasants who are displeased with the royal orders
-        id: 20,
-        text: 'STORY OF REBELS FIGHTING THEIR WAY OUT OF LONDON AND RECRUITING MORE PEASANTS',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 21
-            }
-        ]
-    },
-    { // After doing significant damage, the king is forced to address the issue
-        id: 21,
-        text: 'KING IS FORCED TO AGREE TO THE PEASANT\'S DEMANDS AND ENDS THE REBELLION',
-        options: [
-            {
-                text: 'Continue',
-                nextText: 21
-            }
-        ]
-    },
+    }
 ]
 
 startGame()
